@@ -1,0 +1,31 @@
+Question,Question Type (multiple-choice or multi-select),Answer Option 1,Answer Option 2,Answer Option 3,Answer Option 4,Answer Option 5,Answer Option 6,Correct Responses,Explanation
+Server side encryption means that the data is sent encrypted to the server first,multiple-choice,true ,false,,,,,2,
+"In server side encryption, only the encryption happens on the server. Where does the decryption happen?",multiple-choice,The Server,The Client,,,,,1,
+We need to gain access to a Role in another AWS account. How is it done?,multiple-choice,We should ask for them to create a user for us,We should ask for them to send us access keys,We should use the STS service to gain temporary credentials,,,,3,
+You have a mobile application and would like to give your users access to their own personal space in Amazon S3. How do you achieve that?,multiple-choice,Generate IAM user credentials for each of your application's users,Use Cognito Identity Federation,Use SAML Identity Federation,Use a Bucket Policy to make your bucket public,,,2,
+You need an encryption service that supports asymmetric encryption schemes. Which service could you use?,multiple-choice,CloudHSM,KMS,Lambda,,,,1,
+We'd like to encrypt 100MB of data client side before uploading it to S3. We should use,multiple-choice,KMS Encrypt call,Enveloppe Encryption,SSE-S3,SSE-KMS,,,2,
+You would like to ensure data is encrypted client side before being sent to Kinesis. What should you use?,multiple-choice,The client side encryption option of the AWS SDK,The client side encryption option of the KPL library,The client side encryption option of the KCL library,You must create custom code,,,4,
+Which technology allows you to access the AWS service from your private subnets without the need to have an outgoing internet connection?,multiple-choice,AWS Direct Connect,VPC Endpoints,Internet Gateways,NAT Instances,,,2,
+What do you need to attach to an IoT rule's engine action to ensure it's capable of sending data directly into Kinesis?,multiple-choice,An IAM user,An IoT policy,An IAM group,An IAM role,,,4,
+Which of the following statement is wrong?,multiple-choice,DynamoDB Streams cannot be encrypted,DynamoDB security is done through IAM,Users must be created within DynamoDB,"DynamoDB supports only table creation, not database creation",,,3,"The entire security in DynamoDB is managed through IAM, we don't need to create users within DynamoDB (unlike RDS)"
+Which of the following services is accessed through a VPC Endpoint of type Interface ?,multiple-choice,Kinesis,DynamoDB,S3,,,,1,
+What security mechanism does not exist for RDS?,multiple-choice,KMS at rest encryption,CloudHSM at rest encryption,SSL encryption,Transparent Data Encryption,,,2,
+"You would like to deploy a Lambda function to privately access your RDS database. Under the default options, your Lambda function cannot reach your RDS database due to a network issue. How can you resolve it?",multiple-choice,Encrypt the database password with KMS,Deploy your Lambda function in your VPC,Increase the Lambda timeout,Attach a VPC endpoint to RDS,,,2,
+Which statement about EMR security is incorrect?,multiple-choice,You can SSH into your cluster nodes,EMRFS supports S3 encryption,Apache Ranger is packaged within EMR,EMR supports LUKS encryption,EMR supports Kerberos,There are two security groups assigned between your different cluster nodes,3,"If you choose to use Ranger, it must be installed externally from your EMR cluster. Recommended read: https://aws.amazon.com/blogs/big-data/best-practices-for-securing-amazon-emr/ "
+Which of the following login is not supported by Kibana?,multiple-choice,Using an IAM user,Using Cognito,Using an email / password combination,,,,3,
+Which at rest encryption is not supported by Redshift?,multiple-choice,KMS,CloudHSM,External HSM,LUKS,,,4,this is for EMR
+"Your users are federated using the web identity provider amazon.com. What does the following policy do?{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": [
+        ""s3:GetObject"",
+        ""s3:PutObject""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": [""arn:aws:s3:::mybucket/${www.amazon.com:user_id}/*""]
+    }
+  ]
+}",multiple-choice,Allow AWS IAM users to upload and download objects from a bucket that is named after their username,Allow users federated through amazon.com to upload and download objects from a bucket that is named after their username,,,,,2,
+Someone has deleted your Redshift cluster and you would like to find out who or what it was. How can you do it?,multiple-choice,Use Redshift access logs,Use S3 access Logs,Use CloudTrail,Use IAM,,,3,

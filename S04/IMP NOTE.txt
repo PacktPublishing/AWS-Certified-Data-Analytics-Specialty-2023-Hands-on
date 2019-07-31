@@ -1,0 +1,4 @@
+Note: Amazon Machine Learning Service is now deprecated!
+Heads up: as of April 2019, Amazon is no longer allowing new accounts to use the Machine Learning service (they're pushing you to Sagemaker and their other ML services.) However, this service still appears to be referenced on the exam, and the fundamental concepts behind it will likely remain on the exam.
+
+Bottom line: don't attempt to follow along with the following exercise if you have a new AWS account. But you should still watch it, because the material may still be important for the exam.

@@ -1,0 +1,24 @@
+AWS Cleanup
+One final reminder! If you've been following along with the hands-on exercises, some of the services we used are not free and will incur charges even if you aren't actively using them.
+
+Log into your AWS account, and make sure:
+
+Any EMR clusters are terminated
+
+Any Redshift clusters are terminated
+
+Any Kinesis Streams and Firehose Delivery Streams are deleted
+
+Any Elasticsearch domains are terminated
+
+Your Kinesis Analytics applications are deleted
+
+Any SNS topics are deleted
+
+Any EC2 instances are terminated
+
+Your S3 bucket is deleted
+
+QuickSight is not set up to auto-renew
+
+You might want to give yourself a calendar reminder to check the Billing page in your AWS account in a few days to ensure all charges have stopped.
