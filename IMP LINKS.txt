@@ -1,0 +1,12 @@
+https://www.aws.training/learningobject/curriculum?id=21332
+
+https://aws.amazon.com/certification/certified-big-data-specialty/
+
+https://aws.amazon.com/whitepapers/kinesis-solutions/
+
+http://d0.awsstatic.com/whitepapers/Big_Data_Analytics_Options_on_AWS.pdf
+
+https://d1.awsstatic.com/whitepapers/Migration/migrating-applications-to-aws.pdf
+
+https://d1.awsstatic.com/whitepapers/RDS/AWS_Database_Migration_Service_Best_Practices.pdf
+

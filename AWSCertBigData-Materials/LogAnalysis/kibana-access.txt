@@ -1,0 +1,17 @@
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "es:*"
+      ],
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": [
+            "<your IP>"
+          ]
+        }
+      },
+      "Resource": "arn:aws:es:us-east-1:<your account id>:domain/cadabra/*"
+    },
