@@ -1,0 +1,15 @@
+Section 9 - Exam Tips
+
+AWS Whitepapers & Guides: https://aws.amazon.com/whitepapers/?audit=2019q1&whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc&awsf.whitepapers-content-type=*all&awsf.whitepapers-tech-category=*all&awsf.whitepapers-industries=*all&awsf.whitepapers-business-category=*all&awsf.whitepapers-global-methodology=*all
+
+Big Data Analytics Options on AWS: https://docs.aws.amazon.com/whitepapers/latest/big-dataanalytics-options/welcome.html 
+
+Migrating Applications Running Relational Databases to AWS: https://d1.awsstatic.com/whitepapers/Migration/migrating-applications-to-aws.pdf
+
+AWS Database Migration Service Best Practices: https://d1.awsstatic.com/whitepapers/RDS/AWS_Database_Migration_Service_Best_Practices.pdf
+
+AWS Certified Data Analytics - Specialty (DAS-C01) Exam Guide: https://d1.awsstatic.com/training-and-certification/docs-data-analytics-specialty/AWS-Certified-Data-Analytics-Specialty-Exam-Guide_v1.0_08-23-2019_FINAL.pdf
+
+AWS Certified Data Analytics – Specialty (DAS-C01) Sample Exam Questions: https://d1.awsstatic.com/training-and-certification/docs-data-analytics-specialty/AWS-Certified-Data-Analytics-Specialty_Sample-Questions_v.1.1_FINAL.pdf
+
+Exam Readiness: AWS Certified Data Analytics - Specialty: https://explore.skillbuilder.aws/learn/course/external/view/elearning/51/exam-readiness-aws-certified-data-analytics-specialty
