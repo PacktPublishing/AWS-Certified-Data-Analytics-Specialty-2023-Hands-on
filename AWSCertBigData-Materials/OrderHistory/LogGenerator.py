@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # -*- coding: utf-8 -*-
 """
@@ -15,7 +15,7 @@ sourceData = "OnlineRetail.csv"
 placeholder = "LastLine.txt"
 
 def GetLineCount():
-    with open(sourceData) as f:
+    with open(sourceData, encoding='latin-1') as f:
         for i, l in enumerate(f):
             pass
     return i

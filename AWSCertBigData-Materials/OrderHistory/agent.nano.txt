@@ -3,9 +3,6 @@
   "kinesis.endpoint": "",
   "firehose.endpoint": "",
 
-  "awsAccessKeyId": "AKIAJF4KVZWOY65QWOOA",
-  "awsSecretAccessKey": "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",
-
   "flows": [
     {
       "filePattern": "/var/log/cadabra/*.log",
