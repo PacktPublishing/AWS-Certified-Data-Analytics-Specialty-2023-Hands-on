@@ -1,2 +1,2 @@
-# AWS-Certified-Big-Data-Specialty-2021---In-Depth-and-Hands-On-
-Code Repository for AWS Certified Big Data Specialty 2021 - In Depth and Hands On!, published by Packt
+# AWS Certified Data Analytics Specialty 2022 - Hands On!
+Code Repository for AWS Certified Data Analytics Specialty 2022 - Hands On!, published by Packt
