@@ -1,0 +1,270 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%flink.ssql\n-- ========== Kinesis ==========\n-- https://ci.apache.org/projects/flink/flink-docs-release-1.12/dev/table/connectors/kinesis.html\n\n-- CREATE TABLE `my_table` (\n--   `column1` STRING,\n--   `column2` BIGINT\n-- )\n-- WITH (\n--   'connector' = 'kinesis',\n--   'stream' = 'my_kinesis_stream',\n--   'aws.region' = 'kinesis-stream-aws-region',\n--   'scan.stream.initpos' = 'LATEST',\n--   'format' = 'csv'\n-- );\n\n-- ========== Kafka ==========\n-- https://ci.apache.org/projects/flink/flink-docs-release-1.11/dev/table/connectors/kafka.html\n\n-- CREATE TABLE my_table (\n--   `column1` STRING,\n--   `column2` BIGINT\n-- ) WITH (\n--   'connector' = 'kafka',\n--   'topic' = 'my_topic',\n--   'properties.bootstrap.servers' = 'kafka_broker_endpoint:9092',\n--   'properties.group.id' = 'myGroup',\n--   'scan.startup.mode' = 'earliest-offset',\n--   'format' = 'json'\n-- );",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-09T16:31:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "type": "update",
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1636475501990_1754086883",
+      "id": "paragraph_example_create",
+      "dateCreated": "2021-11-09T16:31:41+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:2764"
+    },
+    {
+      "text": "%flink.ssql\n\nCREATE TABLE orders_json (\n    InvoiceNo VARCHAR(16),\n    StockCode VARCHAR(8),\n    Description VARCHAR(64),\n    Quantity VARCHAR(32),\n    InvoiceDate VARCHAR(16),\n    UnitPrice VARCHAR(16),\n    Customer VARCHAR(16),\n    Country VARCHAR(16),\n    ArrivalTime AS PROCTIME()\n) WITH (\n    'connector' = 'kinesis',\n    'stream' = 'CadabraOrders',\n    'aws.region' = 'us-east-1',\n    'scan.stream.initpos' = 'LATEST',\n    'format' = 'json',\n    'json.timestamp-format.standard' = 'ISO-8601'\n);\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-09T16:34:13+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1636475501991_216165257",
+      "id": "paragraph_1636403232970_1748740308",
+      "dateCreated": "2021-11-09T16:31:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:2765"
+    },
+    {
+      "text": "%flink.ssql(type=update)\n\nSELECT * FROM orders_json;",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-09T16:34:31+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "InvoiceNo": "string",
+                      "StockCode": "string",
+                      "Description": "string",
+                      "Quantity": "string",
+                      "InvoiceDate": "string",
+                      "UnitPrice": "string",
+                      "Customer": "string",
+                      "Country": "string",
+                      "ArrivalTime": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1636475501991_1822488573",
+      "id": "paragraph_1636403657984_888931300",
+      "dateCreated": "2021-11-09T16:31:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:2766"
+    },
+    {
+      "text": "%flink.ssql(type=update) \r\nSELECT * FROM (SELECT CAST(COUNT(*) AS INTEGER) AS order_count \r\nFROM orders_json \r\nGROUP BY TUMBLE(ArrivalTime, INTERVAL '10' second))",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-09T16:34:35+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "order_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1636475501993_1891017261",
+      "id": "paragraph_1636406595413_870623481",
+      "dateCreated": "2021-11-09T16:31:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:2767"
+    },
+    {
+      "text": "%flink.ssql\r\n\r\nCREATE TABLE order_count_table ( \r\n    order_count INTEGER\r\n) WITH ( \r\n    'connector' = 'kinesis', \r\n    'stream' = 'OrderRateAlarms', \r\n    'aws.region' = 'us-east-1', \r\n    'scan.stream.initpos' = 'LATEST', \r\n    'format' = 'json', \r\n    'json.timestamp-format.standard' = 'ISO-8601'); \r\n    \r\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-09T16:34:39+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1636475501993_1670588868",
+      "id": "paragraph_1636403895750_1518572689",
+      "dateCreated": "2021-11-09T16:31:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:2768"
+    },
+    {
+      "text": "%flink.ssql(type=update)\n\nINSERT INTO order_count_table\nSELECT * FROM (SELECT CAST(COUNT(*) AS INTEGER) AS order_count \nFROM orders_json \nGROUP BY TUMBLE(ArrivalTime, INTERVAL '10' second))\nWHERE order_count >= 10;",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-09T16:34:53+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1636475501993_1893720190",
+      "id": "paragraph_1636404612215_663952973",
+      "dateCreated": "2021-11-09T16:31:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:2769"
+    }
+  ],
+  "name": "TransactionAlarm",
+  "id": "2GM1157QS",
+  "defaultInterpreterGroup": "flink",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/TransactionAlarm"
+}

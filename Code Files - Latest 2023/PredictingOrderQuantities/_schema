@@ -1,0 +1,43 @@
+{
+    "version": "1.0",
+    "targetAttributeName": "Quantity",
+    "rowId" : "Description",
+    "dataFormat": "CSV",
+    "dataFileContainsHeader": false,
+    "attributes": [
+        {
+            "attributeName": "InvoiceNo",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "SKU",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Description",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Quantity",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "InvoiceDate",
+            "attributeType": "TEXT"
+
+        },
+        {
+            "attributeName": "UnitPrice",
+            "attributeType": "NUMERIC"
+
+        },
+        {
+            "attributeName": "CustomerID",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Country",
+            "attributeType": "CATEGORICAL"
+        }
+    ]
+}
